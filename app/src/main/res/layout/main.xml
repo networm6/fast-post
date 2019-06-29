@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/img"
+		android:scaleType="centerCrop"/>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<fast.post.NumberAnimTextView
+			android:orientation="horizontal"
+			android:text="1"
+			android:gravity="left"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/mainView1"
+			android:layout_marginLeft="25dp"
+			android:paddingTop="10dp"
+			android:layout_marginRight="25dp"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="top|left"
+			android:layout_marginTop="16dp">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1.2">
+
+				<Button
+					android:layout_width="match_parent"
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="wrap_content"
+					android:text="前往权限设置"
+					android:onClick="setting"/>
+
+				<Button
+					android:layout_width="match_parent"
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="wrap_content"
+					android:text="前往辅助功能"
+					android:onClick="open"/>
+
+				<Button
+					android:layout_width="match_parent"
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="wrap_content"
+					android:text="联系软件作者"
+					android:onClick="appwriter"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="支持Tim/QQ/微信，自动识别"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textColor="#FF00FF2B"
+					android:shadowColor="#FFFF0000"
+					android:shadowDx="1.3"
+					android:shadowDy="1.5"
+					android:shadowRadius="1.9"/>
+
+				<View
+					android:background="?android:attr/dividerVertical"
+					android:layout_width="match_parent"
+					android:layout_height="1dp"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:text="请给悬浮窗权限，辅助功能权限.在给辅助权限之前，请先给词库，词库中，一行为一句，随机发送。在给辅助功能权限后，会有悬浮窗出现，进去qq聊天页面，点击悬浮窗，会自动发送。如果要关闭，先返回桌面，然后再次点击悬浮窗，待关闭权限后，后台关闭软件即可.词库在根目录ck.txt"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:textSize="19sp"
+					android:padding="9dp"
+					android:textColor="#FFFF4081"
+					android:textStyle="bold|italic|normal"
+					android:scrollbars="vertical"
+					android:maxLines="99999"
+					android:typeface="monospace"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1.0">
+
+				<Button
+					android:layout_width="match_parent"
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="wrap_content"
+					android:text="点我获取当前词库"
+					android:onClick="gety"/>
+
+				<EditText
+					android:layout_width="match_parent"
+					android:ems="10"
+					android:layout_height="wrap_content"
+					android:id="@+id/mainEditText1"
+					android:hint="原词库内容"/>
+
+				<View
+					android:background="?android:attr/dividerVertical"
+					android:layout_width="match_parent"
+					android:layout_height="1dp"/>
+
+				<Button
+					android:layout_width="match_parent"
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="wrap_content"
+					android:text="点我重新写入词库"
+					android:onClick="putn"/>
+
+				<EditText
+					android:layout_width="match_parent"
+					android:ems="10"
+					android:layout_height="wrap_content"
+					android:hint="新词库内容"
+					android:id="@+id/mainEditText2"/>
+
+				<View
+					android:background="?android:attr/dividerVertical"
+					android:layout_width="match_parent"
+					android:layout_height="1dp"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</FrameLayout>
+
